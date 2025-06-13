@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jun 2025 pada 18.22
+-- Waktu pembuatan: 13 Jun 2025 pada 04.54
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -44,8 +44,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `kode_admin`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'ADM001', 'admin', 'admin@admin.com', NULL, '$2y$12$SNlAQVk9fQGBi9IMKFlJOeMSsuyLe3eBOWl6EM1sA5nupBYsfgoTi', NULL, '2024-10-11 17:35:58', '2024-10-11 17:35:58'),
-(2, 'ADM002', 'ardi', 'ardi@admin.com', NULL, '$2y$12$k.JZn5/91CYs1MvL9l5URuzscUw0C4Z0pNUJ1ICGNwRKrexHSdQrC', NULL, '2024-10-26 10:05:34', '2024-10-26 10:05:34');
+(1, 'ADM001', 'admin', 'admin@admin.com', NULL, '$2y$12$SNlAQVk9fQGBi9IMKFlJOeMSsuyLe3eBOWl6EM1sA5nupBYsfgoTi', NULL, '2024-10-11 17:35:58', '2024-10-11 17:35:58');
 
 -- --------------------------------------------------------
 
@@ -70,9 +69,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `namabarang`, `hargabarang`, `hargajual`, `keuntungan`, `jumlahbarang`, `satuanbarang`, `created_at`, `updated_at`) VALUES
-('BRG001', 'Buku Sidu 58 Lembar', 3200, 4000, 800, 550, 'PCS', '2024-09-02 05:02:33', '2024-10-26 10:34:11'),
-('BRG002', 'Pulpen', 1500, 2000, 500, 400, 'PCS', '2024-09-02 05:03:50', '2024-10-08 00:49:42'),
-('BRG003', 'Pensil', 1400, 2000, 600, 444, 'PCS', '2024-09-02 05:06:35', '2024-12-13 00:47:28'),
+('BRG001', 'Buku Sidu 58 Lembar', 3200, 4000, 800, 540, 'PCS', '2024-09-02 05:02:33', '2025-06-12 19:37:52'),
+('BRG002', 'Pulpen', 1500, 2000, 500, 595, 'PCS', '2024-09-02 05:03:50', '2025-06-12 19:46:53'),
+('BRG003', 'Pensil', 1400, 2000, 600, 594, 'PCS', '2024-09-02 05:06:35', '2025-06-12 19:46:53'),
 ('BRG004', 'Spidol', 1500, 2000, 500, 100, 'PCS', '2024-10-09 02:51:36', '2024-12-13 00:35:32'),
 ('BRG005', 'Kertas HVS', 49000, 53000, 4000, 100, 'PCS', '2024-12-12 19:53:08', '2024-12-12 19:53:08'),
 ('BRG006', 'Kertas Kado', 1818, 2000, 182, 100, 'PCS', '2024-12-13 00:56:27', '2024-12-13 00:56:27');
@@ -168,7 +167,9 @@ INSERT INTO `detail_pembelians` (`id_pembelian`, `id_barang`, `jumlah`, `harga`,
 ('B021024022', 'BRG002', 20, 2000, '2024-10-02 09:57:27', '2024-10-02 09:57:27'),
 ('B021024023', 'BRG002', 25, 2000, '2024-10-02 10:00:13', '2024-10-02 10:00:13'),
 ('B131224007', 'BRG003', 2, 1400, '2024-12-13 00:28:20', '2024-12-13 00:28:20'),
-('B131224008', 'BRG004', 16, 1500, '2024-12-13 00:35:32', '2024-12-13 00:35:32');
+('B131224008', 'BRG004', 16, 1500, '2024-12-13 00:35:32', '2024-12-13 00:35:32'),
+('B130625001', 'BRG002', 200, 1500, '2025-06-12 19:46:53', '2025-06-12 19:46:53'),
+('B130625001', 'BRG003', 150, 1400, '2025-06-12 19:46:53', '2025-06-12 19:46:53');
 
 -- --------------------------------------------------------
 
@@ -203,7 +204,9 @@ INSERT INTO `detail_penjualans` (`id_penjualan`, `id_barang`, `jumlah`, `harga`,
 ('J091024012', 'BRG004', 5, 2000.00, 500, '2024-10-09 03:05:19', '2024-10-09 03:05:19'),
 ('J091024013', 'BRG003', 3, 1500.00, 300, '2024-10-09 07:23:00', '2024-10-09 07:23:00'),
 ('J091024013', 'BRG004', 1, 2000.00, 500, '2024-10-09 07:23:00', '2024-10-09 07:23:00'),
-('J131224002', 'BRG003', 5, 2000.00, 600, '2024-12-13 00:47:28', '2024-12-13 00:47:28');
+('J131224002', 'BRG003', 5, 2000.00, 600, '2024-12-13 00:47:28', '2024-12-13 00:47:28'),
+('J130625001', 'BRG001', 10, 4000.00, 800, '2025-06-12 19:37:52', '2025-06-12 19:37:52'),
+('J130625001', 'BRG002', 5, 2000.00, 500, '2025-06-12 19:37:52', '2025-06-12 19:37:52');
 
 -- --------------------------------------------------------
 
@@ -342,7 +345,7 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `namapelanggan`, `alamatpelanggan`, `telppelanggan`, `email`, `created_at`, `updated_at`) VALUES
-('PLG001', 'Firman', 'Kp. Rancaekek Kulon', '07893523276', 'firman@example.com', '2024-09-17 03:33:03', '2024-09-17 03:33:03');
+('PLG001', 'Indra', 'Kp. Gunung Letik', '097875654', 'indra@indra.com', '2024-09-17 03:33:03', '2025-06-12 18:35:35');
 
 -- --------------------------------------------------------
 
@@ -390,6 +393,7 @@ INSERT INTO `pembelians` (`id_pembelian`, `id_user`, `id_suplier`, `tanggal`, `t
 ('B021024021', 1, 'SPL001', '2024-10-02', 40000, 50000, '2024-10-02 09:57:05', '2024-10-02 09:57:05'),
 ('B021024022', 1, 'SPL001', '2024-10-02', 40000, 50000, '2024-10-02 09:57:27', '2024-10-02 09:57:27'),
 ('B021024023', 1, 'SPL001', '2024-10-02', 50000, 50000, '2024-10-02 10:00:13', '2024-10-02 10:00:13'),
+('B130625001', 5, 'SPL001', '2025-06-13', 561000, 600000, '2025-06-12 19:46:53', '2025-06-12 19:46:53'),
 ('B131224001', 5, 'SPL001', '2024-12-13', 1650, 1650, '2024-12-13 00:02:32', '2024-12-13 00:02:32'),
 ('B131224002', 5, 'SPL001', '2024-12-13', 1540, 1540, '2024-12-13 00:05:56', '2024-12-13 00:05:56'),
 ('B131224003', 5, 'SPL001', '2024-12-13', 3520, 3520, '2024-12-13 00:09:58', '2024-12-13 00:09:58'),
@@ -444,7 +448,8 @@ INSERT INTO `penjualans` (`id_penjualan`, `id_user`, `id_pelanggan`, `tanggal`, 
 ('J091024012', 1, 'PLG001', '2024-10-09', 10000, 10000, 0, 0, '2024-10-09 03:05:19', '2024-10-09 03:05:19'),
 ('J091024013', 1, 'PLG001', '2024-10-09', 6500, 10000, 3500, 1400, '2024-10-09 07:23:00', '2024-10-09 07:23:00'),
 ('J131224001', 5, 'PLG001', '2024-12-13', 8000, 8000, 0, 2400, '2024-12-13 00:44:37', '2024-12-13 00:44:37'),
-('J131224002', 5, 'PLG001', '2024-12-13', 10000, 10000, 0, 3000, '2024-12-13 00:47:28', '2024-12-13 00:47:28');
+('J131224002', 5, 'PLG001', '2024-12-13', 10000, 10000, 0, 3000, '2024-12-13 00:47:28', '2024-12-13 00:47:28'),
+('J130625001', 5, 'PLG001', '2025-06-13', 50000, 100000, 50000, 10500, '2025-06-12 19:37:52', '2025-06-12 19:37:52');
 
 -- --------------------------------------------------------
 
@@ -488,9 +493,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('5CMj6UFAcIgLqe3sUITlfBYwrLb9z7PN7OdA6Njm', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiazNoYThGVEpGck0zeUVSTURaNzY4Y3c0ZE9IcXVMSTZudEhhTDFlTCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzQ6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9iYXJhbmciO31zOjUyOiJsb2dpbl9hZG1pbl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1734076587),
-('9xH7hSMxx9L6z5AmTXM4J0v2gPZBwI5CtdfscBMB', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOGcyZXVDTGdPVmpZVWhSV2JrUjFEeHY3NW03SldaNnBQZkxOekFTbyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC93ZWxjb21lIjt9fQ==', 1749657420),
-('xo67NzdZXT669drdNGOnDdrZB0e9QFxMHDuYBr7m', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiemhvcEFJQUFDajR1Z0NjRXlDcE04ZFFnalZaSzNJaFQ0cmw1VnF6UiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1735488438);
+('DKGwJUjPkj84FJhZq0xFgAM9fPDt7kamlmTX2wcj', 5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiMEE5TnVQY3hycGR1dWNndmdBSWQ0R0FUVGZScjVMbElIc083RnRvMyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wZW1iZWxpYW4vQjEzMDYyNTAwMS9kZXRhaWwiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo1O30=', 1749782851);
 
 -- --------------------------------------------------------
 
@@ -513,7 +516,7 @@ CREATE TABLE `suplier` (
 --
 
 INSERT INTO `suplier` (`id_suplier`, `namasuplier`, `alamatsuplier`, `telpsuplier`, `email`, `created_at`, `updated_at`) VALUES
-('SPL001', 'Sidu', 'Kab. Bandung', 89444342, 'sidu@sidu.com', '2024-09-06 05:52:17', '2024-09-06 05:52:17');
+('SPL001', 'Joyko', 'Jakarta', 22152673, 'joyko@joyko.com', '2024-09-06 05:52:17', '2025-06-12 18:47:00');
 
 -- --------------------------------------------------------
 
